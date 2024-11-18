@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1058.0" prefWidth="1436.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.viewController.CompraVentaVehiculoViewController">
+   <children>
+      <Button fx:id="btn_regresar" layoutX="957.0" layoutY="990.0" mnemonicParsing="false" onAction="#onCallRegresar" text="Regresar" />
+      <Button fx:id="btn_comprar" layoutX="405.0" layoutY="966.0" mnemonicParsing="false" onAction="#onComprar" text="Comprar" />
+      <Button fx:id="btn_vender" layoutX="662.0" layoutY="978.0" mnemonicParsing="false" onAction="#onVender" text="Vender" />
+      <TableView fx:id="tblListVehiculo" layoutX="957.0" layoutY="374.0" prefHeight="206.0" prefWidth="412.0">
+        <columns>
+          <TableColumn fx:id="tbcPlacaVehiculo" prefWidth="75.0" text="Placa" />
+          <TableColumn fx:id="tbcMarcaVehiculo" prefWidth="75.0" text="Marca" />
+            <TableColumn fx:id="tbcCombustibleVehiculo" prefWidth="91.0" text="Combustible" />
+            <TableColumn fx:id="tbcModeloVehiculo" prefWidth="75.0" text="Modelo" />
+            <TableColumn fx:id="tbcFechaVehiculo" prefWidth="75.0" text="Fecha venta" />
+        </columns>
+      </TableView>
+      <TableView fx:id="tblListCliente" layoutX="957.0" layoutY="73.0" prefHeight="206.0" prefWidth="412.0">
+         <columns>
+            <TableColumn fx:id="tbcCedulaCliente" prefWidth="75.0" text="Cedula" />
+            <TableColumn fx:id="tbcNombreCliente" prefWidth="75.0" text="Nombre" />
+            <TableColumn fx:id="tbcDireccionCliente" prefWidth="75.0" text="Direccion" />
+            <TableColumn fx:id="tbcTelefonoCliente" prefWidth="75.0" text="Telefono" />
+         </columns>
+      </TableView>
+      <Label layoutX="32.0" layoutY="316.0" text="Trasnmision">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="30.0" layoutY="175.0" text="Combustible">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="46.0" layoutY="240.0" text="Modelo">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="50.0" layoutY="120.0" text="Marca">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="54.0" layoutY="62.0" text="Placa">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="32.0" layoutY="394.0" text="tecnomecanica">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <CheckBox fx:id="BTecnomecanica" layoutX="257.0" layoutY="395.0" mnemonicParsing="false" />
+      <TextField fx:id="txtPlaca" layoutX="193.0" layoutY="60.0" />
+      <TextField fx:id="txtMarca" layoutX="193.0" layoutY="118.0" />
+      <TextField fx:id="txtModelo" layoutX="193.0" layoutY="238.0" />
+      <ChoiceBox fx:id="CBTrasnmision" layoutX="193.0" layoutY="314.0" prefWidth="150.0" />
+      <Label layoutX="32.0" layoutY="464.0" text="Fecha de venta">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="DTFecha" layoutX="181.0" layoutY="462.0" />
+      <ChoiceBox fx:id="CBTipoVehiculo" layoutX="192.0" layoutY="549.0" prefWidth="150.0" />
+      <Label layoutX="39.0" layoutY="552.0" text="Tipo de vehiculo">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="pasajerosBusLabel" layoutX="492.0" layoutY="62.0" text="Pasajeros">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="CapacidadCargaCamionLabel" layoutX="468.0" layoutY="63.0" text="Capacidad Carga">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="PuertasBusLabel" layoutX="498.0" layoutY="121.0" text="Puertas">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="capacidadMaleteroBusLabel" layoutX="459.0" layoutY="176.0" text="Capacidad Maletero">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="aireAcondicionadoBusLabel" layoutX="458.0" layoutY="242.0" text="Aire Acondicionado">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="camaraReversaBusLabel" layoutX="463.0" layoutY="316.0" text="Camara de reversa">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="bolsaAireBusLabel" layoutX="478.0" layoutY="384.0" text="Bolsas de aire">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="absBusLabel" layoutX="508.0" layoutY="452.0" text="ABS">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="ejesBusLabel" layoutX="508.0" layoutY="518.0" text="Ejes">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="salidasEmergenciaBusLabel" layoutX="452.0" layoutY="589.0" text="Salidas de emergencia">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtPasajerosBus" layoutX="615.0" layoutY="60.0" />
+      <TextField fx:id="txtPuertasBus" layoutX="615.0" layoutY="118.0" />
+      <TextField fx:id="txtMaleteroBus" layoutX="615.0" layoutY="174.0" />
+      <CheckBox fx:id="CBAireAcondicionadoBus" layoutX="679.0" layoutY="242.0" mnemonicParsing="false" />
+      <CheckBox fx:id="CBCamaraReversaBus" layoutX="679.0" layoutY="318.0" mnemonicParsing="false" />
+      <CheckBox fx:id="CBAbsBus" layoutX="679.0" layoutY="456.0" mnemonicParsing="false" />
+      <TextField fx:id="txtBolsasAireBus" layoutX="615.0" layoutY="382.0" />
+      <TextField fx:id="txtEjesBus" layoutX="615.0" layoutY="516.0" />
+      <TextField fx:id="txtSalidasEmergenciaBus" layoutX="615.0" layoutY="587.0" />
+      <TextField fx:id="txtCapacidadCargaCamion" layoutX="615.0" layoutY="61.0" />
+      <Label fx:id="ACCamionLabel" layoutX="458.0" layoutY="123.0" text="Aire Acondicionado">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="frenosAireCamionLabel" layoutX="484.0" layoutY="177.0" text="Frenos Aire">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="absCamionLabel" layoutX="507.0" layoutY="242.0" text="ABS">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="EjesCamionLabel" layoutX="509.0" layoutY="316.0" text="Ejes">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="tipoCamionLabel" layoutX="479.0" layoutY="385.0" text="Tipo Camion">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <CheckBox fx:id="CBAireAcondicionadoCamion" layoutX="679.0" layoutY="125.0" mnemonicParsing="false" />
+      <CheckBox fx:id="CBFrenosAireCamion" layoutX="679.0" layoutY="177.0" mnemonicParsing="false" />
+      <CheckBox fx:id="CBabsCamion" layoutX="679.0" layoutY="243.0" mnemonicParsing="false" />
+      <TextField fx:id="txtEjesCamion" layoutX="615.0" layoutY="314.0" />
+      <ChoiceBox fx:id="CBTipoCamion" layoutX="615.0" layoutY="383.0" prefWidth="150.0" />
+      <Label fx:id="PasajerosCamionetaLabel" layoutX="480.0" layoutY="64.0" text="Pasajeros">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="PuertasCamionetaLabel" layoutX="495.0" layoutY="124.0" text="Puertas">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="CapacidadMaleteroCamionetaLabel" layoutX="459.0" layoutY="176.0" text="Capacidad maletero">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="BolsasAireCamionetaLabel" layoutX="486.0" layoutY="452.0" text="Bolsas Aire">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="ACCamionetaLabel" layoutX="457.0" layoutY="242.0" text="Aire Acondicionado">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="CamaraDeReversaCamionetaLabel" layoutX="463.0" layoutY="316.0" text="Camara de reversa">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="cuatroporcuatroCamionetaLabel" layoutX="500.0" layoutY="752.0" text="es 4X4">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="asistenteCCamionetaLabel" layoutX="474.0" layoutY="665.0" text="Asistente Carril">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="sensoresColisionCamionetaLabel" layoutX="465.0" layoutY="589.0" text="Sensores colision">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="absCamionetaLabel" layoutX="508.0" layoutY="519.0" text="ABS">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="velocidadCCamionetaLabel" layoutX="465.0" layoutY="384.0" text="Velocidad crucero">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtPasajerosCamioneta" layoutX="615.0" layoutY="60.0" />
+      <TextField fx:id="txtBolsasAireCamioneta" layoutX="615.0" layoutY="452.0" />
+      <TextField fx:id="txtPuertasCamioneta" layoutX="615.0" layoutY="118.0" />
+      <TextField fx:id="txtCapacidadMaleteroCamioneta" layoutX="615.0" layoutY="174.0" />
+      <CheckBox fx:id="CamionetaCBAireAcondicionado" layoutX="679.0" layoutY="242.0" mnemonicParsing="false" />
+      <CheckBox fx:id="CamionetaCB4por4" layoutX="680.0" layoutY="753.0" mnemonicParsing="false" />
+      <CheckBox fx:id="CamionetaCBasistentecarril" layoutX="679.0" layoutY="677.0" mnemonicParsing="false" />
+      <CheckBox fx:id="CamionetaCBSensoresC" layoutX="680.0" layoutY="591.0" mnemonicParsing="false" />
+      <CheckBox fx:id="CamionetaCBAbs" layoutX="680.0" layoutY="521.0" mnemonicParsing="false" />
+      <CheckBox fx:id="CamionetaCBVelocidadCrucero" layoutX="679.0" layoutY="387.0" mnemonicParsing="false" />
+      <CheckBox fx:id="CamionetaCBCamaraReversa" layoutX="679.0" layoutY="318.0" mnemonicParsing="false" />
+      <ChoiceBox fx:id="CBCombustible" layoutX="192.0" layoutY="173.0" prefWidth="150.0" />
+   </children>
+</Pane>
